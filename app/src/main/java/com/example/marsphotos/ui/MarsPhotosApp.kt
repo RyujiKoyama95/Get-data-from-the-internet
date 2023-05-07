@@ -45,6 +45,7 @@ fun MarsPhotosApp(modifier: Modifier = Modifier) {
         ) {
             val marsViewModel: MarsViewModel = viewModel()
             HomeScreen(
+                // 取得したJSONテキストを表示する
                 marsUiState = marsViewModel.marsUiState
             )
         }
