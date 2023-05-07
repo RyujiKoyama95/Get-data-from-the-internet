@@ -44,6 +44,7 @@ class MarsViewModel : ViewModel() {
             try {
                 val listResult = MarsApi.retrofitService.getPhotos()
                 // marsUiStateに取得した結果を設定
+                // これをアプリ起動時に表示する
                 marsUiState = listResult
             } catch (e: IOException) {}
         }
