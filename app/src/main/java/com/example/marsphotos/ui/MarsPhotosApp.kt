@@ -44,8 +44,8 @@ fun MarsPhotosApp(modifier: Modifier = Modifier) {
             color = MaterialTheme.colors.background
         ) {
             val marsViewModel: MarsViewModel = viewModel()
+            // marsViewModel.marsUiStateを渡して、取得したJSONテキストを表示する
             HomeScreen(
-                // 取得したJSONテキストを表示する
                 marsUiState = marsViewModel.marsUiState
             )
         }
