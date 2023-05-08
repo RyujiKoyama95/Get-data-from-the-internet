@@ -24,6 +24,13 @@ import com.example.marsphotos.network.MarsApi
 import kotlinx.coroutines.launch
 import java.io.IOException
 
+// 状態管理のため、3つの状態を持つようにする
+sealed interface MarsUiState {
+    data class Success(val photos: String): MarsUiState
+    object Loading: MarsUiState
+    object Error: MarsUiState
+}
+
 class MarsViewModel : ViewModel() {
     /** The mutable State that stores the status of the most recent request */
     var marsUiState: String by mutableStateOf("")
