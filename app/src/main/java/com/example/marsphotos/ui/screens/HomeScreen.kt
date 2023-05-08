@@ -28,10 +28,14 @@ import com.example.marsphotos.ui.theme.MarsPhotosTheme
 
 @Composable
 fun HomeScreen(
-    marsUiState: String,
+    marsUiState: MarsUiState,
     modifier: Modifier = Modifier
 ) {
-    ResultScreen(marsUiState, modifier)
+    when (marsUiState) {
+        is MarsUiState.Success -> ResultScreen(marsUiState.photos, modifier)
+        is MarsUiState.Loading -> LoadingScreen(modifier)
+        is MarsUiState.Error -> ErrorScreen(modifier)
+    }
 }
 
 /**
