@@ -55,6 +55,16 @@ fun LoadingScreen(modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+fun ErrorScreen(modifier: Modifier = Modifier) {
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = modifier
+    ) {
+        Text(text = stringResource(id = R.string.loading_failed))
+    }
+}
+
 /**
  * The home screen displaying result of fetching photos.
  */
