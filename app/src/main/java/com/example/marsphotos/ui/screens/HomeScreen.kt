@@ -33,6 +33,7 @@ fun HomeScreen(
     marsUiState: MarsUiState,
     modifier: Modifier = Modifier
 ) {
+    // 状態によって表示するUIを振り分ける
     when (marsUiState) {
         is MarsUiState.Success -> ResultScreen(marsUiState.photos, modifier)
         is MarsUiState.Loading -> LoadingScreen(modifier)
