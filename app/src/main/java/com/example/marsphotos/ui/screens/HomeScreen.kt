@@ -17,6 +17,7 @@ package com.example.marsphotos.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -61,7 +62,13 @@ fun ErrorScreen(modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center,
         modifier = modifier
     ) {
-        Text(text = stringResource(id = R.string.loading_failed))
+        Column() {
+            Image(
+                painter = painterResource(id = R.drawable.ic_connection_error),
+                contentDescription = stringResource(id = R.string.loading_failed)
+            )
+            Text(text = stringResource(id = R.string.loading_failed))
+        }
     }
 }
 
