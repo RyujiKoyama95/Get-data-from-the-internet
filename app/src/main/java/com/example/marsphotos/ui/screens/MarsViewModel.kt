@@ -52,7 +52,7 @@ class MarsViewModel : ViewModel() {
                 val listResult = MarsApi.retrofitService.getPhotos()
                 // marsUiStateに取得した結果を設定
                 // これをアプリ起動時に表示する
-                MarsUiState.Success(listResult)
+                MarsUiState.Success("Success: ${listResult.size} Mars photos retrieved\"")
             } catch (e: IOException) {
                 MarsUiState.Error
             }

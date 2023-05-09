@@ -18,7 +18,7 @@ interface MarsApiService {
     // @GETでRetrofitにgetメソッドであることを認識させる
     // パラメタにはURLのエンドポイントを指定。getPhotos()の呼び出しでベースURLの末尾にエンドポイントを追加する
     @GET("photos")
-    suspend fun getPhotos(): String
+    suspend fun getPhotos(): List<MarsPhoto>
 }
 
 object MarsApi {
