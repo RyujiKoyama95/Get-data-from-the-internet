@@ -17,6 +17,7 @@ private val retrofit = Retrofit
 interface MarsApiService {
     // @GETでRetrofitにgetメソッドであることを認識させる
     // パラメタにはURLのエンドポイントを指定。getPhotos()の呼び出しでベースURLの末尾にエンドポイントを追加する
+    // 画像表示するにはどうやる？
     @GET("photos")
     suspend fun getPhotos(): List<MarsPhoto>
 }
