@@ -1,2 +1,3 @@
-#Codelab by Google
-#Get　data　from　the　internet
+Codelab by Google
+
+Get　data　from　the　internet
