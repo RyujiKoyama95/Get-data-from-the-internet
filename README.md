@@ -1,3 +1,3 @@
 Codelab by Google
 
-Get　data　from　the　internet
+Get data from the internet
