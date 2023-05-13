@@ -17,12 +17,13 @@ private val retrofit = Retrofit
 interface MarsApiService {
     // @GETでRetrofitにgetメソッドであることを認識させる
     // パラメタにはURLのエンドポイントを指定。getPhotos()の呼び出しでベースURLの末尾にエンドポイントを追加する
-    // 画像表示するにはどうやる？
     @GET("photos")
     suspend fun getPhotos(): List<MarsPhoto>
 }
 
 object MarsApi {
+    // by lazy{}は最初にこの変数にアクセスしたタイミングで値を初期化し、
+    // 以降のアクセス時には同じ値を返す。シングルトン。
     val retrofitService : MarsApiService by lazy {
         retrofit.create(MarsApiService::class.java)
     }
