@@ -33,6 +33,7 @@ sealed interface MarsUiState {
 
 class MarsViewModel : ViewModel() {
     /** The mutable State that stores the status of the most recent request */
+    // private setをつけることで外部から参照可能、内部でのみ変更可能な変数になる
     var marsUiState: MarsUiState by mutableStateOf(MarsUiState.Loading)
         private set
 
